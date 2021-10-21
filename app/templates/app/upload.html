@@ -1,0 +1,18 @@
+{% extends 'app/base.html' %}
+{% block contenedor %}
+<h2 style="
+margin-top: 30px;
+padding: 60px;
+text-align: center;
+background: #14C9CB;
+color: white;
+font-size: 30px;
+border-radius: 10px;">
+Subir Archivo
+</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token  %}
+    <input type="file" name="document">
+    <button type="submit">Cargar</button>
+</form>
+{% endblock %}

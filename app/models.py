@@ -3,7 +3,8 @@ from django.db import models
 # Create your models here.
 class Factura(models.Model):
     lugar = models.TextField()
-    fecha = models.DateTimeField()
+    fecha = models.DateField(auto_now_add=False, auto_now=False, blank=True, null=True)
+    timestamp = models.DateField(auto_now_add=True, auto_now=False, blank=True)
     referencia = models.CharField(max_length=40)
     nit_e = models.CharField(max_length= 21)
     nit_r = models.CharField(max_length= 21)

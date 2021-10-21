@@ -1,9 +1,10 @@
 from django.contrib import admin
 from django.urls import path
-from .views import signin, home, signup
+from .views import help_, home, todo_form, upload
 
 urlpatterns = [
     path('', home, name= 'home'),
-    path('signin', signin, name='signin'),
-    path('signup', signup, name ='signup')
+    path('todo_form',todo_form, name= 'todo_form'),
+    path('upload', upload, name='upload'),
+    path('help', help_, name='help')
 ]
