@@ -15,3 +15,6 @@ def upload(request):
 
 def help_(request):
     return render(request, 'app/help.html')
+
+def peticiones(request):
+    return render(request, 'app/peticiones.html')
