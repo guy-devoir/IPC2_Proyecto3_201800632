@@ -1,0 +1,44 @@
+{% extends 'app/base.html' %}
+{% block contenedor %}
+<a style="
+background-color: #4CAF50; /* Green */
+border: 10px;
+color: white;
+padding: 15px 32px;
+padding-top: 20px;
+border-radius: 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+">Reset</a>
+<a style="
+background-color: #4CAF50; /* Green */
+border: 10px;
+color: white;
+padding: 15px 32px;
+padding-top: 20px;
+border-radius: 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+">Enviar</a>
+<div class="row mt-5">
+    {% for todo in todos %}
+    <div class="col-12 col-md-4 mb-3">
+        <div class="card">
+            <h5 class="card-header">
+                {{ todo.title }}
+            </h5>
+            <div class="card-body">
+                {{ todo.descripction }}
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'delete_todo' todo.id %}" class="btn btn-success"> Completed!</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
