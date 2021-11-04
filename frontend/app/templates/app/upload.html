@@ -10,9 +10,9 @@ font-size: 30px;
 border-radius: 10px;">
 Subir Archivo
 </h2>
-<form method="post" enctype="multipart/form-data">
+<form method="POST" enctype="multipart/form-data">
     {% csrf_token  %}
-    <input type="file" name="document">
+    <input type="file[]" name="document">
     <button type="submit">Cargar</button>
 </form>
 {% endblock %}

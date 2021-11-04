@@ -25,6 +25,7 @@ try:
 	#Paso 3
 	print("Sumatoria: ",sigma)
 	#Paso 4 y 5
+	print(sigma%11)
 	modulo_once = 11 - sigma%11
 	print(modulo_once, " : ", _nit[0])
 

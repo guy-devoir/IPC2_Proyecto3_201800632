@@ -24,6 +24,22 @@ text-decoration: none;
 display: inline-block;
 font-size: 16px;
 ">Enviar</a>
+
+<div class="card mt-5 mx-auto w-50 text-center">
+    <h5 class="card-header">
+        Entrada
+    </h5>
+    <div class="card-body">
+        <form action="{{archivo.action}}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <textarea class="form-control" name="content" id="content" cols="30" rows="10">{{archivo.content}}</textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Analizar</button>
+        </form>
+    </div>
+</div>
+
 <div class="row mt-5">
     {% for todo in todos %}
     <div class="col-12 col-md-4 mb-3">
